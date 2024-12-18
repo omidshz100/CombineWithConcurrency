@@ -1,4 +1,4 @@
-```markdown
+markdown
 # Swift Concurrency with Async/Await and Grand Central Dispatch
 
 This repository demonstrates various concepts of **Swift Concurrency** using **async/await**, **SwiftUI**, **actors**, and **Grand Central Dispatch** (GCD). The examples cover how to work with asynchronous tasks, bridge completion handlers into async functions, and manage concurrent operations using GCD and actors.
@@ -20,7 +20,7 @@ func loadCount() async -> Int {
 func load() async {
     let result = await loadCount()  // Calling an async function
 }
-```
+
 
 #### Calling Async Functions from Synchronous Functions
 - We can call an async function from a synchronous function by using `Task` to create an asynchronous context.
