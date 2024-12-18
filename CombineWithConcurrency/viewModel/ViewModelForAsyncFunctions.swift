@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-
+// init
 
 actor Counter {
     private var value = 0
