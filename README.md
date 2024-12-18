@@ -1,4 +1,4 @@
-markdown
+
 # Swift Concurrency with Async/Await and Grand Central Dispatch
 
 This repository demonstrates various concepts of **Swift Concurrency** using **async/await**, **SwiftUI**, **actors**, and **Grand Central Dispatch** (GCD). The examples cover how to work with asynchronous tasks, bridge completion handlers into async functions, and manage concurrent operations using GCD and actors.
