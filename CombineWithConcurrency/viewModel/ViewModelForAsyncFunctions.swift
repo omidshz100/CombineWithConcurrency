@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-// init
+
 
 actor Counter {
     private var value = 0
@@ -27,7 +27,7 @@ class ViewModel: ObservableObject {
     @Published var incomingData: String = "Loading..."
     @Published var counterValue: Int = 0
     
-    
+  // starting -----  Actor Sample
     // Shared Counter actor instance
         private let counter = Counter()
     // Increment the counter and update the UI
@@ -40,10 +40,10 @@ class ViewModel: ObservableObject {
                self.counterValue = newValue
            }
        }
+    // ending -----  Actor Sample
     
     
-    
-    
+    // starting -----  Async function
     // Async function that does not throw
     func loadCount() async -> Int {
         // Simulate a delay
@@ -105,12 +105,11 @@ class ViewModel: ObservableObject {
             }
         }
     }
+    // ending -----  Async function
     
     
     
-    /// The way  bridge a completion-handler-based API into Swift’s async/await system
-    /// we haev this completion function
-    
+    // starting -----  bridging completion function to Async function
    private func fetchData(completion: @escaping (String) -> Void) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
             completion("Data fetched from legacy API")
@@ -135,4 +134,6 @@ class ViewModel: ObservableObject {
            self.incomingData = result
        }
    }
+    
+    // ending -----  bridging completion function to Async function
 }

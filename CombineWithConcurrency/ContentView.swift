@@ -20,7 +20,8 @@ struct ContentView: View {
     var body: some View {
         ScrollView{
             VStack {
-                Text("-------------------------------------")
+                Text("--------\n Section for async and await \n--------")
+                    .foregroundStyle(.blue)
                 Text("Showing the result after 5 seconds")
                 Text("\(viewModel.status)")
                     .padding()
@@ -32,7 +33,9 @@ struct ContentView: View {
                                 .font(.headline)
                 
                 
-                Text("-------------------------------------")
+                Text("--------\nSection for erialQueue, concurrentQueue --------")
+                    .padding()
+                    .foregroundStyle(.green)
                 Text(viewModel2.status)
                                 .font(.headline)
                                 .padding()
@@ -48,7 +51,8 @@ struct ContentView: View {
                                 }
                                 .padding()
                             }
-                Text("-------------------------------------")
+                Text("--------\n Main And Global Queue \n--------")
+                    .foregroundStyle(.cyan)
                 Text(viewModelMainAndGlobal.status)
                                 .font(.headline)
                                 .padding()
@@ -74,6 +78,7 @@ struct ContentView: View {
             
             
         }
+        .frame(maxWidth: .infinity)
     }
 }
 
